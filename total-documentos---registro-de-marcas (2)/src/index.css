@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Fraunces", serif;
+
+  --color-brand-primary: #86C642;
+  --color-brand-deep: #0B3D2E;
+  --color-brand-offwhite: #F7F5EF;
+  --color-brand-gray: #5B5F66;
+  --color-brand-black: #0A0A0A;
+  --color-risk-red: #C8392E;
+  --color-risk-yellow: #E5A33A;
+  --color-risk-green: #22C55E;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-offwhite text-brand-black font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .bg-paper {
+    background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+  }
+  
+  .shadow-premium {
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.serif-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
